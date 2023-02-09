@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.catalogue-page {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+    /* for mobile phones */
+
+    .catalogue-page {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+.product-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+
+}
+
+.product-section:hover{
+ /* From https://css.glass  glassmorphism effect*/
+ background: rgba(255, 255, 255, 0.469);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(5px);
+ -webkit-backdrop-filter: blur(5px);
+ border: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+.product-image {
+  width: 50%;
+}
+
+.product-image_hover {
+    width: 50%;
+    position:absolute;
+    display: none;
+}
+
+.product-section:hover .product-image_hover{
+    display:inline;
+}
+
+
+.product-info {
+  width: 50%;
+  text-align: left;
+  /* padding-inline:4em;  */
+}
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-name:hover{
+    text-decoration: underline;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+
+}
+.product-button {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+}
